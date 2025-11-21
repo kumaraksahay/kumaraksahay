@@ -16,5 +16,5 @@ Here are some ideas to get you started:
 -->
 
 
-  <a href="https://linkedin.com/in/the-eshan-kumar/"><img src="https://img.icons8.com/fluent/48/000000/linkedin.png"/></a>
+  <a href="https:https://www.linkedin.com/in/akshay-kumar"><img src="https://img.icons8.com/fluent/48/000000/linkedin.png"/></a>
   <a href="https://www.instagram.com/eshandhankani/"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png"/></a>
