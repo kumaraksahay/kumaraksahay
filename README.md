@@ -14,3 +14,7 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+
+  <a href="https://linkedin.com/in/the-eshan-kumar/"><img src="https://img.icons8.com/fluent/48/000000/linkedin.png"/></a>
+  <a href="https://www.instagram.com/eshandhankani/"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png"/></a>
