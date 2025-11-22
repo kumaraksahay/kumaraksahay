@@ -40,11 +40,10 @@
 
 ### 🤖 AI Tools I Use (Problem Solving & Development)
 
-[![ChatGPT](https://img.icons8.com/?size=48&id=y4VCH0A2v7QR&format=png)](https://chat.openai.com/)
-[![GitHub Copilot](https://img.icons8.com/?size=48&id=8rKdRqZFLurS&format=png)](https://github.com/features/copilot)
-[![Google Gemini](https://img.icons8.com/?size=48&id=zfHRZ6i4JRb9&format=png)](https://gemini.google.com/)
-[![Microsoft Copilot](https://img.icons8.com/?size=48&id=F4ZcH1GMDw1D&format=png)](https://www.microsoft.com/microsoft-copilot)
-[![Bard](https://img.icons8.com/?size=48&id=30686&format=png)](https://bard.google.com/)
+[![ChatGPT](https://raw.githubusercontent.com/akshayykumar/resources/main/chatgpt.png)](https://chat.openai.com/)
+[![Gemini](https://raw.githubusercontent.com/akshayykumar/resources/main/gemini.png)](https://gemini.google.com/)
+[![GitHub Copilot](https://raw.githubusercontent.com/akshayykumar/resources/main/copilot.png)](https://github.com/features/copilot)
+[![Bard](https://raw.githubusercontent.com/akshayykumar/resources/main/bard.png)](https://bard.google.com/)
 
 ---
 
