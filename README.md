@@ -1,9 +1,5 @@
 ## Software Developer 👋
 
-<!--
-**kumaraksahay/kumaraksahay** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
--->
-
 <a href="https://www.linkedin.com/in/akshay-kumar-245783187/" target="_blank">
   <img src="https://img.icons8.com/fluent/48/000000/linkedin.png" alt="LinkedIn"/>
 </a>
@@ -14,7 +10,7 @@
 
 ---
 
-### 🚀 **Skills & Technologies**
+### 🚀 Skills & Technologies
 
 #### **Frontend / Mobile**
 [![React](https://img.icons8.com/color/48/000000/react-native.png)](https://react.dev/)
@@ -42,6 +38,16 @@
 
 ---
 
-### 🌐 **Social Links**
+### 🤖 AI Tools I Use (Problem Solving & Development)
+
+[![ChatGPT](https://img.icons8.com/?size=48&id=y4VCH0A2v7QR&format=png)](https://chat.openai.com/)
+[![GitHub Copilot](https://img.icons8.com/?size=48&id=8rKdRqZFLurS&format=png)](https://github.com/features/copilot)
+[![Google Gemini](https://img.icons8.com/?size=48&id=zfHRZ6i4JRb9&format=png)](https://gemini.google.com/)
+[![Microsoft Copilot](https://img.icons8.com/?size=48&id=F4ZcH1GMDw1D&format=png)](https://www.microsoft.com/microsoft-copilot)
+[![Bard](https://img.icons8.com/?size=48&id=30686&format=png)](https://bard.google.com/)
+
+---
+
+### 🌐 Social Links
 [![LinkedIn](https://img.icons8.com/fluent/48/000000/linkedin.png)](https://www.linkedin.com/in/akshay-kumar-245783187/)
 [![GitHub](https://img.icons8.com/fluent/48/000000/github.png)](https://github.com/akshaykumar)
