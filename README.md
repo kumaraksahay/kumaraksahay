@@ -37,14 +37,12 @@
 [![NPM](https://img.icons8.com/color/48/000000/npm.png)](https://www.npmjs.com/)
 
 ---
+### 🤖 AI Tools I Use for Problem Solving
 
-### 🤖 AI Tools I Use (Problem Solving & Development)
-
-[![ChatGPT](https://www.vectorlogo.zone/logos/openai/openai-icon.png)](https://chat.openai.com/)
-[![Gemini](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Google_Gemini_logo.svg/240px-Google_Gemini_logo.svg.png)](https://gemini.google.com/)
-[![GitHub Copilot](https://www.vectorlogo.zone/logos/github_copilot/github_copilot-icon.png)](https://github.com/features/copilot)
-[![Bard](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Google_Bard_logo.svg/240px-Google_Bard_logo.svg.png)](https://bard.google.com/)
-
+![ChatGPT](https://img.shields.io/badge/ChatGPT-%23000000.svg?style=for-the-badge&logo=openai&logoColor=white)
+![Google Gemini](https://img.shields.io/badge/Google%20Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-000000?style=for-the-badge&logo=githubcopilot&logoColor=white)
+![Google Bard](https://img.shields.io/badge/Google%20Bard-0059ff?style=for-the-badge&logo=google&logoColor=white)
 
 ---
 
