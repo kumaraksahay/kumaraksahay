@@ -1,685 +1,406 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akshay Kumar - Full Stack Architect</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #0a0e27;
-            color: #fff;
-            overflow-x: hidden;
-        }
-
-        /* Animated Background */
-        .bg-animation {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            background: linear-gradient(45deg, #0a0e27, #1a1f3a, #0a0e27);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
-        }
-
-        .stars {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
-
-        .star {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: white;
-            border-radius: 50%;
-            animation: twinkle 3s infinite;
-        }
-
-        @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        @keyframes twinkle {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 1; }
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 2rem;
-            position: relative;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: 5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 1rem;
-            animation: slideDown 1s ease;
-        }
-
-        .hero .subtitle {
-            font-size: 1.8rem;
-            color: #a0aec0;
-            margin-bottom: 2rem;
-            animation: slideUp 1s ease 0.3s backwards;
-        }
-
-        .typing-container {
-            font-size: 1.3rem;
-            color: #4fd1c5;
-            margin-bottom: 3rem;
-            min-height: 2em;
-            animation: slideUp 1s ease 0.6s backwards;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: slideUp 1s ease 0.9s backwards;
-        }
-
-        .btn {
-            padding: 1rem 2.5rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border: 2px solid #667eea;
-            backdrop-filter: blur(10px);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(102, 126, 234, 0.2);
-            transform: translateY(-3px);
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Stats Section */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .stat-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            animation: fadeIn 1s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-10px) scale(1.05);
-            background: rgba(102, 126, 234, 0.1);
-            border-color: #667eea;
-            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #4fd1c5, #667eea);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            color: #a0aec0;
-            margin-top: 0.5rem;
-        }
-
-        /* Skills Section */
-        .section {
-            padding: 5rem 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: 3rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            background: linear-gradient(135deg, #667eea 0%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-category {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
-            border: 1px solid rgba(102, 126, 234, 0.3);
-            border-radius: 20px;
-            padding: 2rem;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .skill-category::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transition: left 0.5s;
-        }
-
-        .skill-category:hover::before {
-            left: 100%;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.4);
-            border-color: #667eea;
-        }
-
-        .skill-category h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: #4fd1c5;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-        }
-
-        .skill-tag {
-            background: rgba(79, 209, 197, 0.1);
-            border: 1px solid #4fd1c5;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        .skill-tag:hover {
-            background: rgba(79, 209, 197, 0.3);
-            transform: scale(1.1);
-        }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .project-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 2rem;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
-        }
-
-        .project-card:hover::after {
-            transform: scaleX(1);
-        }
-
-        .project-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 25px 70px rgba(102, 126, 234, 0.5);
-            border-color: #667eea;
-        }
-
-        .project-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .project-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: #f093fb;
-        }
-
-        .project-card p {
-            color: #a0aec0;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .tech-badge {
-            background: rgba(102, 126, 234, 0.2);
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.85rem;
-            color: #4fd1c5;
-        }
-
-        .project-link {
-            display: inline-block;
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .project-link:hover {
-            color: #f093fb;
-            transform: translateX(5px);
-        }
-
-        /* Contact Section */
-        .contact {
-            text-align: center;
-            padding: 5rem 2rem;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
-            border-radius: 30px;
-            max-width: 1200px;
-            margin: 3rem auto;
-        }
-
-        .contact h2 {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact p {
-            font-size: 1.3rem;
-            color: #a0aec0;
-            margin-bottom: 3rem;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .social-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid #667eea;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .social-icon:hover {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            transform: translateY(-10px) rotate(360deg);
-            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        /* Scroll indicator */
-        .scroll-indicator {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateX(-50%) translateY(0);
-            }
-            40% {
-                transform: translateX(-50%) translateY(-20px);
-            }
-            60% {
-                transform: translateX(-50%) translateY(-10px);
-            }
-        }
-
-        .scroll-indicator::after {
-            content: '↓';
-            font-size: 2rem;
-            color: #667eea;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 3rem;
-            }
-            .hero .subtitle {
-                font-size: 1.3rem;
-            }
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="bg-animation"></div>
-    <div class="stars" id="stars"></div>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>AKSHAY KUMAR</h1>
-            <div class="subtitle">Full Stack Developer | Mobile App Architect</div>
-            <div class="typing-container" id="typing"></div>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Let's Connect</a>
-            </div>
-        </div>
-        <div class="scroll-indicator"></div>
-    </section>
-
-    <!-- Stats Section -->
-    <div class="stats">
-        <div class="stat-card">
-            <div class="stat-number">5+</div>
-            <div class="stat-label">Years Experience</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">50+</div>
-            <div class="stat-label">Projects Delivered</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">20+</div>
-            <div class="stat-label">Technologies</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">100%</div>
-            <div class="stat-label">Client Satisfaction</div>
-        </div>
-    </div>
-
-    <!-- Skills Section -->
-    <section class="section">
-        <h2 class="section-title">💼 Technical Excellence</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>🎨 Frontend & Mobile</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Next.js</span>
-                    <span class="skill-tag">React Native</span>
-                    <span class="skill-tag">TypeScript</span>
-                    <span class="skill-tag">Tailwind CSS</span>
-                    <span class="skill-tag">Redux</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>⚙️ Backend & Database</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">Express</span>
-                    <span class="skill-tag">NestJS</span>
-                    <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">PostgreSQL</span>
-                    <span class="skill-tag">GraphQL</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>🚀 DevOps & Cloud</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">Kubernetes</span>
-                    <span class="skill-tag">AWS</span>
-                    <span class="skill-tag">CI/CD</span>
-                    <span class="skill-tag">Nginx</span>
-                    <span class="skill-tag">Firebase</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="section" id="projects">
-        <h2 class="section-title">🏆 Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-icon">🌱</div>
-                <h3>Plant Care Hub</h3>
-                <p>A comprehensive mobile application for smart plant management with AI-powered care reminders and community features.</p>
-                <div class="project-tech">
-                    <span class="tech-badge">React Native</span>
-                    <span class="tech-badge">Firebase</span>
-                    <span class="tech-badge">Push Notifications</span>
-                </div>
-                <a href="#" class="project-link">View Project →</a>
-            </div>
-            <div class="project-card">
-                <div class="project-icon">🩺</div>
-                <h3>Skin Scan Disease Detector</h3>
-                <p>AI-powered health diagnostic tool using machine learning for skin disease detection and treatment recommendations.</p>
-                <div class="project-tech">
-                    <span class="tech-badge">Machine Learning</span>
-                    <span class="tech-badge">React Native</span>
-                    <span class="tech-badge">TensorFlow</span>
-                </div>
-                <a href="#" class="project-link">View Project →</a>
-            </div>
-            <div class="project-card">
-                <div class="project-icon">🎯</div>
-                <h3>Enterprise Solutions</h3>
-                <p>Scalable full-stack applications serving thousands of users with real-time features and microservices architecture.</p>
-                <div class="project-tech">
-                    <span class="tech-badge">Next.js</span>
-                    <span class="tech-badge">Node.js</span>
-                    <span class="tech-badge">Microservices</span>
-                </div>
-                <a href="#" class="project-link">View Project →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <h2>Let's Build Something Amazing</h2>
-        <p>Open to opportunities • Available for collaboration • Ready to innovate</p>
-        <div class="social-links">
-            <div class="social-icon" title="LinkedIn">💼</div>
-            <div class="social-icon" title="GitHub">💻</div>
-            <div class="social-icon" title="Email">📧</div>
-            <div class="social-icon" title="Instagram">📷</div>
-        </div>
-        <div style="margin-top: 2rem;">
-            <a href="mailto:kumarakshaykolhi@gmail.com" class="btn btn-primary">Get In Touch</a>
-        </div>
-    </section>
-
-    <script>
-        // Create stars
-        const starsContainer = document.getElementById('stars');
-        for (let i = 0; i < 100; i++) {
-            const star = document.createElement('div');
-            star.className = 'star';
-            star.style.left = Math.random() * 100 + '%';
-            star.style.top = Math.random() * 100 + '%';
-            star.style.animationDelay = Math.random() * 3 + 's';
-            starsContainer.appendChild(star);
-        }
-
-        // Typing animation
-        const phrases = [
-            'Building scalable solutions 🚀',
-            'Crafting beautiful interfaces 🎨',
-            'Solving complex problems 💡',
-            'Driving innovation forward ⚡'
-        ];
-        let phraseIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        const typingElement = document.getElementById('typing');
-
-        function type() {
-            const currentPhrase = phrases[phraseIndex];
-            
-            if (isDeleting) {
-                typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typingElement.textContent = currentPhrase.substring(0, charIndex + 1);
-                charIndex++;
-            }
-
-            if (!isDeleting && charIndex === currentPhrase.length) {
-                setTimeout(() => isDeleting = true, 2000);
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                phraseIndex = (phraseIndex + 1) % phrases.length;
-            }
-
-            const speed = isDeleting ? 50 : 100;
-            setTimeout(type, speed);
-        }
-
-        type();
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-
-        // Animate on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeIn 1s ease forwards';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.skill-category, .project-card').forEach(el => {
-            observer.observe(el);
-        });
-    </script>
-</body>
-</html>
+<div align="center">
+
+<!-- Holographic Header Animation -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20,24,30&height=280&section=header&text=AKSHAY%20KUMAR&fontSize=90&fontAlignY=35&animation=fadeIn&fontColor=gradient&desc=Full%20Stack%20Architect%20%E2%80%A2%20Mobile%20Innovator%20%E2%80%A2%20AI%20Engineer&descAlignY=55&descSize=22" width="100%"/>
+
+<!-- Glowing Typing Effect -->
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&multiline=true&repeat=true&width=800&height=100&lines=Crafting+Digital+Experiences+%F0%9F%9A%80;Building+Tomorrow's+Solutions+Today+%F0%9F%92%A1;Transforming+Ideas+into+Reality+%E2%9C%A8" alt="Typing SVG" />
+</a>
+
+<!-- Dynamic Status Badges -->
+<p align="center">
+  <img src="https://img.shields.io/badge/🎯_Mission-Transform%20Ideas%20Into%20Impact-FF3CAC?style=for-the-badge&labelColor=1a1a2e&gradient"/>
+  <img src="https://img.shields.io/badge/💼_Status-Open%20For%20Opportunities-00F5A0?style=for-the-badge&labelColor=1a1a2e"/>
+  <img src="https://img.shields.io/badge/🌍_Location-Available%20Globally-784BA0?style=for-the-badge&labelColor=1a1a2e"/>
+</p>
+
+<!-- Animated Profile Metrics -->
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=kumaraksahay&label=PROFILE+VIEWS&color=brightgreen&style=for-the-badge" alt="Profile Views" />
+  <img src="https://img.shields.io/github/followers/kumaraksahay?label=FOLLOWERS&style=for-the-badge&color=blue&logo=github" alt="Followers" />
+  <img src="https://img.shields.io/badge/RESPONSE_TIME-⚡_LIGHTNING_FAST-yellow?style=for-the-badge" alt="Response Time" />
+</p>
+
+<!-- Gradient Divider -->
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+
+</div>
+
+<!-- About Me Section with Modern Card Design -->
+<div align="center">
+
+## 🎭 THE ARCHITECT BEHIND THE CODE
+
+<table>
+<tr>
+<td width="60%">
+
+### 👨‍💻 Who Am I?
+
+```typescript
+const akshay = {
+  role: "Full Stack Engineer",
+  code: ["JavaScript", "TypeScript", "Python", "SQL"],
+  technologies: {
+    frontend: ["React", "Next.js", "React Native"],
+    backend: ["Node.js", "NestJS", "Express"],
+    databases: ["MongoDB", "PostgreSQL", "Redis"],
+    cloud: ["AWS", "Firebase", "Vercel"],
+    aiTools: ["ChatGPT", "Claude AI", "Copilot"]
+  },
+  architecture: ["Microservices", "Event-Driven", "Serverless"],
+  currentFocus: "Building AI-powered applications",
+  challenge: "I turn coffee into code ☕ → 💻"
+};
+```
+
+</td>
+<td width="40%">
+
+### 🎯 Quick Facts
+
+```yaml
+📍 Location: Global Remote
+🎓 Degree: Computer Science
+💼 Experience: 3+ Years
+🌟 Projects: 50+ Completed
+👥 Team Lead: Yes
+🏆 Success Rate: 98%
+⚡ Superpower: Problem Solving
+🎨 Design: UI/UX Enthusiast
+```
+
+</td>
+</tr>
+</table>
+
+</div>
+
+<!-- Technology Stack with Glow Effect -->
+<div align="center">
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+
+## 🛠️ TECHNOLOGY ECOSYSTEM
+
+### 🎨 Frontend Universe
+<p align="center">
+  <a href="#"><img src="https://skillicons.dev/icons?i=react,nextjs,reactnative,typescript,javascript,html,css,tailwind,sass,bootstrap,materialui,redux&theme=dark&perline=6" alt="Frontend" /></a>
+</p>
+
+### ⚙️ Backend Arsenal
+<p align="center">
+  <a href="#"><img src="https://skillicons.dev/icons?i=nodejs,express,nestjs,graphql,prisma,mongodb,postgresql,mysql,redis,firebase&theme=dark&perline=5" alt="Backend" /></a>
+</p>
+
+### 🔧 DevOps & Tools
+<p align="center">
+  <a href="#"><img src="https://skillicons.dev/icons?i=git,github,gitlab,docker,kubernetes,aws,vercel,nginx,postman,vscode,androidstudio,xcode&theme=dark&perline=6" alt="Tools" /></a>
+</p>
+
+### 🤖 AI-Powered Development
+<p align="center">
+  <img src="https://img.shields.io/badge/ChatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white&shadow=true" />
+  <img src="https://img.shields.io/badge/Claude_AI-191919?style=for-the-badge&logo=anthropic&logoColor=D97757&shadow=true" />
+  <img src="https://img.shields.io/badge/GitHub_Copilot-000000?style=for-the-badge&logo=githubcopilot&logoColor=white&shadow=true" />
+  <img src="https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=google&logoColor=white&shadow=true" />
+</p>
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+
+</div>
+
+<!-- Featured Projects Section -->
+<div align="center">
+
+## 🚀 FEATURED INNOVATIONS
+
+</div>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 🌱 [Plant Care Hub](https://github.com/kumaraksahay/Plant_Care_Hub)
+
+<div align="center">
+<img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+<img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" />
+<img src="https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white" />
+</div>
+
+**Smart Plant Management Ecosystem**
+
+```diff
++ 📱 Cross-platform mobile application
++ 🔔 AI-powered watering reminders
++ 📊 Real-time health monitoring
++ 🌍 Community-driven features
++ 📸 Plant identification via camera
++ 📈 Growth tracking analytics
+```
+
+<div align="center">
+
+[![View Project](https://img.shields.io/badge/VIEW_PROJECT-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kumaraksahay/Plant_Care_Hub)
+[![Live Demo](https://img.shields.io/badge/LIVE_DEMO-00C853?style=for-the-badge&logo=google-play&logoColor=white)](#)
+
+</div>
+
+</td>
+<td width="50%" valign="top">
+
+### 🩺 [Skin Scan Disease Detector](https://github.com/kumaraksahay/Skin_Scan_DiseaseAk)
+
+<div align="center">
+<img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" />
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+</div>
+
+**AI-Powered Health Diagnostic Platform**
+
+```diff
++ 🤖 Deep learning disease detection
++ 📸 Advanced image recognition
++ 💊 Personalized treatment plans
++ 📈 Health insights dashboard
++ 🔒 HIPAA-compliant security
++ 🌐 Multi-language support
+```
+
+<div align="center">
+
+[![View Project](https://img.shields.io/badge/VIEW_PROJECT-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kumaraksahay/Skin_Scan_DiseaseAk)
+[![Documentation](https://img.shields.io/badge/DOCUMENTATION-0288D1?style=for-the-badge&logo=read-the-docs&logoColor=white)](#)
+
+</div>
+
+</td>
+</tr>
+</table>
+
+<!-- GitHub Stats Section -->
+<div align="center">
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+
+## 📊 PERFORMANCE ANALYTICS
+
+<p align="center">
+  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=kumaraksahay&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=00D9FF&icon_color=00F5A0&text_color=FFFFFF&ring_color=FF3CAC" alt="GitHub Stats"/>
+  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=kumaraksahay&theme=radical&hide_border=true&background=0D1117&stroke=00D9FF&ring=FF3CAC&fire=FFB86C&currStreakLabel=00D9FF" alt="GitHub Streak"/>
+</p>
+
+<p align="center">
+  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kumaraksahay&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=00D9FF&text_color=FFFFFF&langs_count=8" alt="Top Languages"/>
+  <img width="49%" src="https://github-readme-activity-graph.vercel.app/graph?username=kumaraksahay&theme=react-dark&hide_border=true&bg_color=0D1117&color=00D9FF&line=FF3CAC&point=00F5A0" alt="Activity Graph"/>
+</p>
+
+<!-- Trophy Case -->
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=kumaraksahay&theme=radical&no-frame=true&no-bg=true&column=7&margin-w=15&margin-h=15" alt="Trophies"/>
+</p>
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+
+</div>
+
+<!-- Contribution Graph -->
+<div align="center">
+
+## 🐍 CONTRIBUTION SNAKE
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kumaraksahay/kumaraksahay/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kumaraksahay/kumaraksahay/output/github-contribution-grid-snake.svg">
+  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/kumaraksahay/kumaraksahay/output/github-contribution-grid-snake.svg">
+</picture>
+
+</div>
+
+<!-- Skills Matrix -->
+<div align="center">
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+
+## 💎 EXPERTISE MATRIX
+
+<table>
+<tr>
+<td align="center" width="20%">
+<img src="https://techstack-generator.vercel.app/react-icon.svg" alt="React" width="65" height="65" />
+<br><strong>React Ecosystem</strong>
+<br>⭐⭐⭐⭐⭐
+</td>
+<td align="center" width="20%">
+<img src="https://techstack-generator.vercel.app/ts-icon.svg" alt="TypeScript" width="65" height="65" />
+<br><strong>TypeScript</strong>
+<br>⭐⭐⭐⭐⭐
+</td>
+<td align="center" width="20%">
+<img src="https://techstack-generator.vercel.app/nodejs-icon.svg" alt="Node.js" width="65" height="65" />
+<br><strong>Node.js</strong>
+<br>⭐⭐⭐⭐⭐
+</td>
+<td align="center" width="20%">
+<img src="https://techstack-generator.vercel.app/aws-icon.svg" alt="AWS" width="65" height="65" />
+<br><strong>Cloud (AWS)</strong>
+<br>⭐⭐⭐⭐
+</td>
+<td align="center" width="20%">
+<img src="https://techstack-generator.vercel.app/docker-icon.svg" alt="Docker" width="65" height="65" />
+<br><strong>DevOps</strong>
+<br>⭐⭐⭐⭐
+</td>
+</tr>
+</table>
+
+</div>
+
+<!-- Value Proposition -->
+<div align="center">
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+
+## 🎯 WHY CHOOSE ME?
+
+<table>
+<tr>
+<td align="center" width="25%">
+<img src="https://img.icons8.com/clouds/100/000000/lightning-bolt.png" width="80"/>
+<h3>⚡ Lightning Fast</h3>
+<p><strong>Rapid Development</strong><br/>Quick turnaround without compromising quality</p>
+</td>
+<td align="center" width="25%">
+<img src="https://img.icons8.com/clouds/100/000000/code.png" width="80"/>
+<h3>🎯 Clean Code</h3>
+<p><strong>Best Practices</strong><br/>Scalable, maintainable, and documented</p>
+</td>
+<td align="center" width="25%">
+<img src="https://img.icons8.com/clouds/100/000000/creative-thinking.png" width="80"/>
+<h3>💡 Innovative</h3>
+<p><strong>Creative Solutions</strong><br/>Out-of-the-box problem solving</p>
+</td>
+<td align="center" width="25%">
+<img src="https://img.icons8.com/clouds/100/000000/handshake.png" width="80"/>
+<h3>🤝 Reliable</h3>
+<p><strong>Trust & Delivery</strong><br/>On time, every time</p>
+</td>
+</tr>
+</table>
+
+</div>
+
+<!-- Services Offered -->
+<div align="center">
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+
+## 🎁 SERVICES I OFFER
+
+</div>
+
+<table>
+<tr>
+<td width="33%" valign="top">
+
+### 📱 Mobile Development
+- Native iOS & Android
+- React Native Apps
+- Cross-platform Solutions
+- App Store Deployment
+- Performance Optimization
+
+</td>
+<td width="33%" valign="top">
+
+### 🌐 Web Development
+- Responsive Websites
+- Progressive Web Apps
+- E-commerce Solutions
+- SaaS Platforms
+- Custom Dashboards
+
+</td>
+<td width="33%" valign="top">
+
+### 🤖 AI Integration
+- ChatGPT Integration
+- ML Model Deployment
+- Intelligent Automation
+- Data Analytics
+- Predictive Systems
+
+</td>
+</tr>
+</table>
+
+<!-- Connect Section -->
+<div align="center">
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+
+## 🌐 LET'S BUILD SOMETHING AMAZING TOGETHER
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/akshay-kumar-245783187/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect_Now-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=000000" alt="LinkedIn" height="40"/>
+  </a>
+  <a href="mailto:kumarakshaykolhi@gmail.com">
+    <img src="https://img.shields.io/badge/Email-Reach_Out-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=000000" alt="Email" height="40"/>
+  </a>
+  <a href="https://www.instagram.com/kumarakshayakr/" target="_blank">
+    <img src="https://img.shields.io/badge/Instagram-Follow_Me-E4405F?style=for-the-badge&logo=instagram&logoColor=white&labelColor=000000" alt="Instagram" height="40"/>
+  </a>
+  <a href="https://github.com/kumaraksahay" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-Explore_Code-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=000000" alt="GitHub" height="40"/>
+  </a>
+</p>
+
+### 📧 kumarakshaykolhi@gmail.com
+
+<p align="center">
+<img src="https://img.shields.io/badge/💼-OPEN_TO_OPPORTUNITIES-00D9FF?style=for-the-badge&labelColor=000000" />
+<img src="https://img.shields.io/badge/🚀-AVAILABLE_FOR_PROJECTS-00F5A0?style=for-the-badge&labelColor=000000" />
+<img src="https://img.shields.io/badge/🌍-REMOTE_FRIENDLY-FF3CAC?style=for-the-badge&labelColor=000000" />
+</p>
+
+</div>
+
+<!-- Quote Section -->
+<div align="center">
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+
+## 💭 DAILY MOTIVATION
+
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical&quote=Innovation%20distinguishes%20between%20a%20leader%20and%20a%20follower&author=Steve%20Jobs" />
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+
+</div>
+
+<!-- Footer -->
+<div align="center">
+
+### 🎨 Designed & Developed with 💙 and ☕
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20,24,30&height=120&section=footer" width="100%"/>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Made_With-Passion_%26_Coffee-FF3CAC?style=for-the-badge&labelColor=000000" />
+  <img src="https://img.shields.io/badge/Status-Always_Learning-00D9FF?style=for-the-badge&labelColor=000000" />
+  <img src="https://img.shields.io/badge/Version-2025.1-00F5A0?style=for-the-badge&labelColor=000000" />
+</p>
+
+**⭐ Star this repo if you like it! | 🔄 Fork to customize**
+
+*"Code is like humor. When you have to explain it, it's bad."* – Cory House
+
+---
+
+**© 2025 Akshay Kumar | All Rights Reserved**
+
+</div>
