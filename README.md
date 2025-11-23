@@ -4,15 +4,6 @@
  
 <!-- Animated Badges Row --> <p align="center"> <img src="https://img.shields.io/badge/💻_Code_Craftsman-4A90E2?style=for-the-badge&labelColor=000000" /> <img src="https://img.shields.io/badge/🎯_Problem_Solver-FF6B6B?style=for-the-badge&labelColor=000000" /> <img src="https://img.shields.io/badge/🚀_Innovation_Driver-4ECDC4?style=for-the-badge&labelColor=000000" /> <img src="https://img.shields.io/badge/⚡_Fast_Learner-FFE66D?style=for-the-badge&labelColor=000000" /> </p> <!-- Profile Counter with Style --> <p align="center"> <img src="https://komarev.com/ghpvc/?username=kumaraksahay&label=Profile%20Views&color=blueviolet&style=for-the-badge&abbreviated=true" alt="Profile Views" /> <img src="https://img.shields.io/github/followers/kumaraksahay?label=Followers&style=for-the-badge&color=success&logo=github" alt="Followers" /> <img src="https://img.shields.io/badge/Open_To-Opportunities-orange?style=for-the-badge&logo=handshake&logoColor=white" alt="Open to Work" /> </p> <!-- Stunning Quote Box --> <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical&quote=Write%20code%20that%20speaks,%20solve%20problems%20that%20matter&author=Akshay%20Kumar" /> </div> <!-- Animated Separator --> <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"> <div align="center"> 
 
-### 🔥 What Drives Me
-
-> *"My motivation isn't just writing code—it's about creating solutions that empower users, streamline businesses, and make a real impact. Every project is an opportunity to learn, innovate, and push boundaries."*
-
-**🎯 Core Values:** Innovation • Quality • Collaboration • Continuous Learning
-
-</div>
-
----
 
 ## 💼 Professional Arsenal
 
@@ -115,23 +106,7 @@
 
 ---
 
-## 🎓 Continuous Learning Journey
 
-```javascript
-const learningPath = {
-  current: ["Advanced System Design", "Cloud Architecture", "Web3 Technologies"],
-  next: ["Kubernetes Mastery", "AI/ML Integration", "Performance Optimization"],
-  philosophy: "Stay curious, stay humble, stay hungry for knowledge"
-};
-```
-
-<div align="center">
-
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=kumaraksahay&theme=tokyonight&hide_border=true)
-
-</div>
-
----
 
 ## 💡 Why Work With Me?
 
@@ -191,19 +166,6 @@ const learningPath = {
 ![Quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
 
 ---
-
-### 🚀 Current Status
-
-```text
-🔭 Building innovative solutions that matter
-🌱 Mastering cloud-native architectures
-💡 Open to exciting opportunities and collaborations
-⚡ Fun fact: I believe the best code is code that doesn't need comments
-```
-
----
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer&fontSize=0" width="100%"/>
 
 **⭐️ From [Akshay Kumar](https://github.com/kumaraksahay) | Built with 💙 and ☕**
 
