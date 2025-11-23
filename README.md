@@ -75,46 +75,6 @@
 
 ---
 
-## 📈 Activity Graph
-
-[![Akshay's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=akshaykumar&theme=tokyo-night&hide_border=true)](https://github.com/akshaykumar)
-
----
-
-## 💼 Professional Experience
-
-```yaml
-Current_Role:
-  title: "Software Developer"
-  focus: ["Full Stack Development", "Mobile Apps", "API Design"]
-  
-Expertise:
-  - Cross-platform mobile development with React Native
-  - RESTful API design and implementation
-  - Database design and optimization
-  - Cloud services integration
-```
-
----
-
-## 🌟 Achievements & Highlights
-
-<div align="center">
-
-![](https://img.shields.io/badge/Code%20Reviews-500+-blue?style=for-the-badge)
-![](https://img.shields.io/badge/Projects%20Completed-30+-green?style=for-the-badge)
-![](https://img.shields.io/badge/Coffee%20Consumed-∞-brown?style=for-the-badge)
-
-</div>
-
----
-
-## 📚 Latest Blog Posts
-<!-- BLOG-POST-LIST:START -->
-- Coming Soon: Setting up automated blog posts from Medium/Dev.to
-<!-- BLOG-POST-LIST:END -->
-
----
 
 ## 💭 Quote of the Day
 
@@ -141,18 +101,7 @@ I'm always open to interesting conversations and collaboration opportunities!
 ---
 
 <div align="center">
-  
-### 🎵 Currently Vibing To
 
-[![spotify-github-profile](https://spotify-github-profile.vercel.app/api/view?uid=YOUR_SPOTIFY_ID&cover_image=true&theme=novatorem&show_offline=false&background_color=121212&interchange=false&bar_color=53b14f&bar_color_cover=false)](https://spotify-github-profile.vercel.app/api/view?uid=YOUR_SPOTIFY_ID&redirect=true)
-
-</div>
-
----
-
-<div align="center">
-  
-![Profile Views](https://komarev.com/ghpvc/?username=akshaykumar&color=blueviolet&style=for-the-badge)
 
 ### 💡 *"Code is like humor. When you have to explain it, it's bad."* – Cory House
 
