@@ -12,7 +12,7 @@
 <a href="https://www.instagram.com/kumarakshayakr/" target="_blank">
   <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/>
 </a>
-<a href="mailto:your.email@example.com">
+<a href="mailto:kumarakshaykolhi@gmail.com">
   <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
 </a>
 
@@ -20,13 +20,11 @@
 
 ---
 
-
-
 ## 🛠️ Tech Stack
 
 ### **Frontend & Mobile Development**
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=react,nextjs,redux,javascript,typescript,html,css,tailwind,bootstrap" />
+  <img src="https://skillicons.dev/icons?i=react,reactnative,nextjs,redux,javascript,typescript,html,css,tailwind,bootstrap" />
 </p>
 
 ### **Backend Development**
@@ -63,18 +61,17 @@
 
 <div align="center">
 
-<a href="https://github.com/akshaykumar/project1">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=akshaykumar&repo=project1&theme=tokyonight" />
+<a href="https://github.com/kumaraksahay/Plant_Care_Hub">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=kumaraksahay&repo=Plant_Care_Hub&theme=tokyonight" />
 </a>
 
-<a href="https://github.com/akshaykumar/project2">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=akshaykumar&repo=project2&theme=tokyonight" />
+<a href="https://github.com/kumaraksahay/Skin_Scan_DiseaseAk">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=kumaraksahay&repo=Skin_Scan_DiseaseAk&theme=tokyonight" />
 </a>
 
 </div>
 
 ---
-
 
 ## 💭 Quote of the Day
 
@@ -94,7 +91,7 @@ I'm always open to interesting conversations and collaboration opportunities!
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Let's_Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/akshay-kumar-245783187/)
 [![Instagram](https://img.shields.io/badge/Instagram-Follow_Me-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/kumarakshayakr/)
-[![Email](https://img.shields.io/badge/Email-Drop_a_Message-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your.email@example.com)
+[![Email](https://img.shields.io/badge/Email-Drop_a_Message-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kumarakshaykolhi@gmail.com)
 
 </div>
 
@@ -102,9 +99,8 @@ I'm always open to interesting conversations and collaboration opportunities!
 
 <div align="center">
 
-
 ### 💡 *"Code is like humor. When you have to explain it, it's bad."* – Cory House
 
-**⭐ From [Akshay Kumar](https://github.com/akshaykumar)**
+**⭐ From [Akshay Kumar](https://github.com/kumaraksahay)**
 
 </div>
