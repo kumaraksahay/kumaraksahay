@@ -1,39 +1,8 @@
 <div align="center">
 
-# 🌟 Akshay Kumar
-
-### Full Stack Developer | Mobile App Architect | Innovation Enthusiast
-
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&width=800&lines=Crafting+Digital+Experiences+That+Matter;React+%E2%9A%9B%EF%B8%8F+%7C+React+Native+%F0%9F%93%B1+%7C+Node.js+%F0%9F%9A%80;Transforming+Ideas+Into+Reality;Passionate+About+Clean+Code+%26+Innovation)](https://git.io/typing-svg)
-
-<img src="https://komarev.com/ghpvc/?username=kumaraksahay&label=Profile%20Views&color=0e75b6&style=for-the-badge" alt="Profile Views" />
-
-</div>
-
----
-
-## 🎯 About Me
-
-```typescript
-const akshay = {
-  role: "Full Stack Developer",
-  location: "Building the future, one commit at a time 🌍",
-  currentFocus: ["Scalable Architecture", "Mobile-First Design", "AI Integration"],
-  
-  lifePhilosophy: "Write code that speaks, solve problems that matter",
-  
-  dailyRoutine: {
-    morning: "☕ Coffee + Code Review",
-    afternoon: "💻 Building & Shipping",
-    evening: "📚 Learning New Tech",
-    night: "🔥 Side Projects & Innovation"
-  },
-  
-  funFact: "I debug with console.log and I'm not ashamed! 😄"
-};
-```
-
-<div align="center">
+<div align="center"> <!-- Animated Wave Header --> <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,6,12,20&height=200&section=header&text=Akshay%20Kumar&fontSize=70&fontAlignY=35&animation=twinkling&fontColor=ffffff&desc=Full%20Stack%20Developer%20%7C%20Mobile%20App%20Architect%20%7C%20Innovation%20Engineer&descAlignY=55&descSize=18" width="100%"/> <!-- Multi-line Typing Animation --> 
+ 
+<!-- Animated Badges Row --> <p align="center"> <img src="https://img.shields.io/badge/💻_Code_Craftsman-4A90E2?style=for-the-badge&labelColor=000000" /> <img src="https://img.shields.io/badge/🎯_Problem_Solver-FF6B6B?style=for-the-badge&labelColor=000000" /> <img src="https://img.shields.io/badge/🚀_Innovation_Driver-4ECDC4?style=for-the-badge&labelColor=000000" /> <img src="https://img.shields.io/badge/⚡_Fast_Learner-FFE66D?style=for-the-badge&labelColor=000000" /> </p> <!-- Profile Counter with Style --> <p align="center"> <img src="https://komarev.com/ghpvc/?username=kumaraksahay&label=Profile%20Views&color=blueviolet&style=for-the-badge&abbreviated=true" alt="Profile Views" /> <img src="https://img.shields.io/github/followers/kumaraksahay?label=Followers&style=for-the-badge&color=success&logo=github" alt="Followers" /> <img src="https://img.shields.io/badge/Open_To-Opportunities-orange?style=for-the-badge&logo=handshake&logoColor=white" alt="Open to Work" /> </p> <!-- Stunning Quote Box --> <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical&quote=Write%20code%20that%20speaks,%20solve%20problems%20that%20matter&author=Akshay%20Kumar" /> </div> <!-- Animated Separator --> <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"> <div align="center"> 
 
 ### 🔥 What Drives Me
 
